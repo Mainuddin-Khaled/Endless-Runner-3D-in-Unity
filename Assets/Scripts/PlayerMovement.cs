@@ -98,5 +98,16 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            GameOver();
+        }
+    }
+
+    void GameOver()
+    {
+        Debug.Log("GAME OVER");
+        forwardSpeed = 0f;
+        laneChangeSpeed = 0f;
     }
 }
