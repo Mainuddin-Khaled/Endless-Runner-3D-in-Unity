@@ -106,8 +106,8 @@ public class PlayerMovement : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("GAME OVER");
-        forwardSpeed = 0f;
-        laneChangeSpeed = 0f;
+        float score = transform.position.z;
+
+        GameManager.instance.GameOver(score);
     }
 }
