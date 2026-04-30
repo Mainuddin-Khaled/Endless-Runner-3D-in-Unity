@@ -51,7 +51,8 @@ public class GroundGenerator : MonoBehaviour
     {
         for (int i = 0; i < grounds.Count; i++)
         {
-            grounds[i].transform.Translate(-transform.forward * (moveSpeed * Time.deltaTime));
+            GameObject ground = grounds[i];
+            ground.transform.Translate(-transform.forward * (moveSpeed * Time.deltaTime));
         }
     }
 }
